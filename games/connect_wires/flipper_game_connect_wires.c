@@ -665,6 +665,8 @@ int32_t flipper_game_connect_wires(void* p) {
         }
 
         furi_mutex_release(appState->mutex);
+        view_port_update(view_port);
+      
     }
 
     free(appState);
