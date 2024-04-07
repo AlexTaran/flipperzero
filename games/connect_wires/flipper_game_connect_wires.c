@@ -731,7 +731,8 @@ int32_t flipper_game_connect_wires(void* p) {
         furi_mutex_release(appState->mutex);
     }
 
-    free(appState);
+    free(appState->mutex);
+	free(appState);
 
     furi_message_queue_free(event_queue);
 
